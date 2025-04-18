@@ -47,6 +47,8 @@ Based on this analysis, we aim to identify:
 * **Changes in Claim Patterns:** Any significant shifts in the frequency or severity of claims over time.
 * **Potential External Factors:**  the analysis  reveal trends that could be linked to broader economic conditions, regulatory changes, or increased competition during the company's operational period.
 
+* Credit : https://www.youtube.com/live/TazNFzgWtgA?si=ZSd0t0vOWY8jQiug
+
 ## Conclusion
 
 This data analysis provides a comprehensive overview of the motor insurance company's financial performance leading up to its closure. The insights gained can help understand the factors contributing to the heavy financial losses and offer valuable lessons for other players in the insurance industry. Further investigation into operational costs and market dynamics could provide a more complete picture.
