@@ -1,0 +1,32 @@
+Avg. Premium = AVERAGE(motor_insurance[PREMIUM])
+
+Avg.Claim = AVERAGE(motor_insurance[CLAIM_PAID])
+
+Avg.Claim2 = DIVIDE([Total Claim],[Policy opened])
+
+Bar chart labels = 
+    var v_type =SELECTEDVALUE(motor_insurance[TYPE_VEHICLE])
+    var motor_insurances = FORMAT([Policy opened],"#,##0,.0k")
+    var P2C = IF([PbyC Ratio] <1,"🔴","✅")
+RETURN 
+    v_type &" " & motor_insurances &" " & P2C
+
+Claim count = CALCULATE([Policy count],motor_insurance[CLAIM_PAID]>0)
+
+Premium to claim Ratio = DIVIDE([Total premium],[Total Claim])
+
+Policy closed = CALCULATE([Policy count],USERELATIONSHIP('Calendar'[Date],motor_insurance[INSR_END]))
+
+Policy count = COUNTROWS('motor_insurance')
+
+Policy opened = [Policy count]
+
+Tooltip header = 
+    var v_type = SELECTEDVALUE(motor_insurance[TYPE_VEHICLE]) 
+    var v_make = SELECTEDVALUE(motor_insurance[MAKE])
+RETURN
+    v_type & " - " & v_make
+
+Total Claim = sum(motor_insurance[CLAIM_PAID])
+
+Total premium = SUM(motor_insurance[PREMIUM])
